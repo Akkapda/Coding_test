@@ -3,11 +3,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Solution {
-    public static void main(String[] args) {
-//        String[] files = {"F- 5 Freedom Fighter", "B- 50 Superfortress", "A-10 Thunderbolt II", "F-14 Tomcat"};
-        String[] files = {"F-15"};
-        solution(files);
-    }
     public static String[] solution(String[] files) {
         String[] answer = new String[files.length];
         Map<Integer, String[]> details = new HashMap<>();
@@ -47,18 +42,6 @@ public class Solution {
             if (details.get(o1)[0].toLowerCase().equals(details.get(o2)[0].toLowerCase())) {
                 String s1 = details.get(o1)[1];
                 String s2 = details.get(o2)[1];
-                for(int i = 0; i < s1.length(); i++) {
-                    if (s1.charAt(i) > '0') {
-                        s1 = s1.substring(i);
-                        break;
-                    }
-                }
-                for(int i = 0; i < s2.length(); i++) {
-                    if (s2.charAt(i) > '0') {
-                        s2 = s2.substring(i);
-                        break;
-                    }
-                }
                 if (Integer.parseInt(s1) == (Integer.parseInt(s2))) {
                     return 0;
                 } else {
